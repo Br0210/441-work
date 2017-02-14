@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.boxStyle {
+    display: inline-block;
+    width: 440px;
+    height: 260px;
+    font-family: "Times New Roman";
+    float: center;
+    line-height: 80px;
+    background: #00ff00;
+}
+</style>
+</head>
+
+<center><body onload= "myChanger()">
+
+<div id= "divID", class="boxStyle">
+     <h1 id= "countdownTimer">Countdown Timer</h1>
+     <h1 id="countdownTimer2">Time Left - <span id="countdowntimer">20 </span></h1>
+</div>
+
+    <script type="text/javascript">
+    var timeleft = 20;
+    var countdownTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    //causes next event to occur
+    if(timeleft <= 0)
+        clearInterval(countdownTimer);
+    },250);   //rate
+
+  function myChanger() {
+      setTimeout(function(){
+     document.getElementById("countdownTimer").textContent= "Countdown Done!";//new text
+     document.getElementById("countdownTimer2").textContent= "";//second hides text of the first timer
+     document.getElementById("divID").style.background = "#ff0000";//red
+     document.getElementById("divID").style.lineHeight = "6";
+     //puts text in center of the box
+    }, 5000);
+     }
+
+    </script>
+
+    </body></center>
+</html>
