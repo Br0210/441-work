@@ -15,7 +15,7 @@
 </style>
 </head>
 
-<center><body onload= "myChanger()">
+<center><body >
 
 <div id= "divID", class="boxStyle">
      <h1 id= "countdownTimer">Countdown Timer</h1>
@@ -30,16 +30,16 @@
     //causes next event to occur
     if(timeleft <= 0)
         clearInterval(countdownTimer);
+      myChanger();
     },250);   //rate
 
   function myChanger() {
-      setTimeout(function(){
+      
      document.getElementById("countdownTimer").textContent= "Countdown Done!";//new text
      document.getElementById("countdownTimer2").textContent= "";//second hides text of the first timer
      document.getElementById("divID").style.background = "#ff0000";//red
      document.getElementById("divID").style.lineHeight = "6";
      //puts text in center of the box
-    }, 5000);
      }
 
     </script>
