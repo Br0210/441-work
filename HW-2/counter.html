@@ -28,9 +28,10 @@
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
     //causes next event to occur
-    if(timeleft <= 0)
-        clearInterval(countdownTimer);
-      myChanger();
+    if(timeleft <= 0) {
+       clearInterval(countdownTimer);
+       myChanger();
+    }
     },250);   //rate
 
   function myChanger() {
