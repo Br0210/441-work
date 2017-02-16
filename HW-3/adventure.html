@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+    .adventureStyle {
+        float: center;
+        margin: 15px;
+        padding: 10px;
+        max-width: 100%;
+        background: rgba(169,169,169,.5);
+        font-family: "The Lost Canyon", "The Lost Canyon-Italic";
+        height: 100%;
+        display: inline-block;
+        border: 5px;
+    }
+    #header{
+            min-height: 100px;
+        }
+        #menu{
+            min-height: 40px;
+        }
+        #body{
+            min-height: 400px;
+            margin-top: 3%;
+
+        }
+        #footer{
+            min-height: 100px;
+            margin-top: 3%;
+        }
+        #header, #menu, #body, #footer{
+            margin-left: 10%;
+            margin-right: 10%;
+
+            box-shadow: 3px 5px 7px #666666;
+            border: 1px solid black;
+        }
+        @viewport{
+            zoom: 1.0;
+            width: extend-to-zoom;
+        }
+        @-ms-viewport{
+            width: extend-to-zoom;
+            zoom: 1.0;
+        }
+    </style>
+    <title>Adventure</title>
+  </head>
+  <body background="http://pre02.deviantart.net/14b5/th/pre/f/2006/325/b/2/paper_texture_by_akinna_stock.jpg">
+    <center>
+      <img src="http://img01.deviantart.net/5e4c/i/2016/149/5/5/creepy_mansion_by_nele_diel-da48bqn.jpg" width="auto" height="auto" alt="Enter!">
+    </center>
+    <div id="header", class="adventureStyle">
+      <h1 align="center" style="color:black">
+        <center><font face="The Lost Canyon">The Hand of Fate</center><img src="https://media.giphy.com/media/OVGHNjjoC7No4/giphy.gif" width="auto" height="auto" alt="Enter!">
+      </h1>
+    </div>
+
+    <div></div>
+
+    <div id="header", class="adventureStyle">
+      <h2 align="center" style="font-family:The Lost Canyon;color:black;font-size:30px;">
+        <center><font face="The Lost Canyon">Test of Wills</center>
+      </h2>
+      <p><i>Fate decides the road we choose, although we are rarely given the power control the outcomes.
+         Today you are going to be the "hidden hand" for an unexpecting soul of another world. See how much a simple choice
+         can change the life of another. Are you prepared for this mantel of responsibility?
+      </i></p>
+      <center><button style="color:blue;" ,="" id="leftButton" onclick="Yes()">Yes</button>
+      <button style="color:red;" ,="" id="rightButton" onclick="No()">No</button><p id="Fated"></p></center>
+    </div>
+
+  <script>
+    function Yes() {
+      document.getElementById("Fated").innerHTML= "Very well let us begin, choose the gender of your subject<p><button onclick='male()'>Male</button><button onclick='female()'>Female</button></p><div id='gen'</div>";
+   }
+    function No() {
+      document.getElementById("Fated").innerHTML = "Indeed it is a heavy burden.";
+    }
+    function male() {
+      document.getElementById('gen').innerHTML = "Strong and healthy, you are given domain of this soul.<p><button onclick='Seize()'>Seize</button></p><div id='prt3'></div>";
+    }
+    function female() {
+      document.getElementById('gen').innerHTML = "Beautiful and healthy, you are given domain of this soul.<p><button onclick='Seize2()'>Seize</button></p><div id='prt4'></div>";
+    }
+    function Seize() {
+      document.getElementById('prt3').innerHTML = "You are in possession of a <b>soul</b>, determine its path. <p><button onclick='live()'>Live</button><button onclick='die()'>Die</button></p><div id='prt5'</div>";
+    }
+    function Seize2() {
+      document.getElementById('prt4').innerHTML = "You are in possession of a <b>soul</b>, determine its path. <p><button onclick='live2()'>Live</button><button onclick='die2()'>Die</button></p><div id='prt6'</div>";
+    }
+  function live2() {
+    document.getElementById('prt6').innerHTML = "Strange...The being which you were to have full control over is resisting...You can no longer meddel in mortal affairs";
+  }
+  function die2() {
+    document.getElementById('prt6').innerHTML = "Strange...The being which you were to have full control over is resisting to die...You can no longer meddel in mortal affairs";
+  }
+    function live() {
+      document.getElementById('prt5').innerHTML = "Strange...The being which you were to have full control over is resisting...You can no longer meddel in mortal affairs";
+    }
+    function die() {
+      document.getElementById('prt5').innerHTML = "Strange...The being which you were to have full control over is resisting to die...You can no longer meddel in mortal affairs";
+      button.addEventListener("click", function() {});
+    }
+  </script>
+</body>
+</html>
